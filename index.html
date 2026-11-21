@@ -1,0 +1,1467 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛24小时爆料汇总 - 官方品牌视频门户 | 24小时赛事爆料影像社区</title>
+<meta name="description" content="每日大赛24小时爆料汇总官方网站，作为深耕赛事爆料领域的视频品牌平台，我们用原创高清影像记录每日大赛的高光与幕后，为创作者与用户搭建值得信赖的内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131c2b'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff3b47' stroke-width='4'/%3E%3Cpath d='M28 24 L43 32 L28 40 Z' fill='%23ff3b47'/%3E%3C/svg%3E">
+<style>
+:root{
+  --db24-ink:#0f141d;
+  --db24-ink-soft:#1a2231;
+  --db24-paper:#f4f5f7;
+  --db24-white:#ffffff;
+  --db24-red:#ff3b47;
+  --db24-red-deep:#d81f2c;
+  --db24-grey:#6b7485;
+  --db24-line:#e2e5ea;
+  --db24-gold:#f0b429;
+  --db24-radius:14px;
+  --db24-shadow:0 10px 30px rgba(15,20,29,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--db24-paper);
+  color:var(--db24-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.db24-sticky-top{position:sticky;top:0;z-index:120}
+
+/* 公告条 */
+.db24-notice-bar{
+  background:linear-gradient(90deg,var(--db24-red-deep),var(--db24-red) 55%,#ff6a4d);
+  color:#fff;font-size:13.5px;
+}
+.db24-notice-inner{
+  max-width:1200px;margin:0 auto;padding:8px 20px;
+  display:flex;align-items:center;gap:12px;overflow:hidden;
+}
+.db24-notice-tag{
+  flex:none;background:rgba(0,0,0,.28);border-radius:6px;
+  padding:2px 9px;font-size:12px;letter-spacing:.5px;
+}
+.db24-notice-track{flex:1;overflow:hidden;white-space:nowrap}
+.db24-notice-track span{display:inline-block;animation:db24Scroll 26s linear infinite}
+.db24-notice-track span b{color:#ffe4a3;font-weight:600}
+@keyframes db24Scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.db24-notice-more{flex:none;font-size:12.5px;opacity:.9}
+.db24-notice-more:hover{opacity:1;text-decoration:underline}
+
+/* 页头 */
+.db24-header{
+  background:rgba(15,20,29,.97);
+  backdrop-filter:blur(10px);
+  color:#eef1f6;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.db24-header-inner{
+  max-width:1200px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;gap:26px;height:66px;
+}
+.db24-brand{display:flex;align-items:center;gap:10px;flex:none}
+.db24-brand-mark{
+  width:36px;height:36px;border-radius:10px;flex:none;
+  background:radial-gradient(circle at 30% 25%,#ff6a4d,#d81f2c 70%);
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;
+  box-shadow:0 0 0 3px rgba(255,59,71,.18);
+}
+.db24-brand-name{font-size:16.5px;font-weight:700;letter-spacing:.4px;line-height:1.2}
+.db24-brand-sub{font-size:10.5px;color:#93a0b4;letter-spacing:1.6px;text-transform:uppercase}
+.db24-nav{display:flex;gap:4px;flex:1;justify-content:center}
+.db24-nav a{
+  font-size:14px;padding:7px 12px;border-radius:8px;color:#c6cfdc;transition:.2s;
+}
+.db24-nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.db24-nav a.db24-nav-active{color:#fff;background:rgba(255,59,71,.16)}
+.db24-header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.db24-search{position:relative;display:flex;align-items:center}
+.db24-search input{
+  width:170px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);color:#fff;padding:0 32px 0 12px;font-size:13px;outline:none;transition:.22s;
+}
+.db24-search input::placeholder{color:#8d9aad}
+.db24-search input:focus{width:210px;border-color:var(--db24-red);background:rgba(255,255,255,.1)}
+.db24-search-btn{
+  position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-size:14px;color:#9fabbd;padding:3px;
+}
+.db24-search-btn:hover{color:var(--db24-red)}
+.db24-btn-cta{
+  background:linear-gradient(135deg,var(--db24-red),var(--db24-red-deep));
+  color:#fff;border-radius:8px;padding:8px 15px;font-size:13.5px;font-weight:600;
+  transition:.2s;white-space:nowrap;
+}
+.db24-btn-cta:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(255,59,71,.38)}
+.db24-nav-toggle{display:none;font-size:20px;color:#dfe5ee;padding:4px 8px}
+.db24-search-hint{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;color:var(--db24-ink);
+  border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.24);padding:8px;font-size:13px;display:none;z-index:60;
+}
+.db24-search-hint.db24-show{display:block}
+.db24-search-hint b{color:var(--db24-red)}
+.db24-search-hint p{padding:4px 8px;color:var(--db24-grey)}
+
+/* 通用容器 */
+.db24-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.db24-section{padding:64px 0}
+.db24-section-sm{padding:44px 0}
+.db24-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:32px;flex-wrap:wrap}
+.db24-sec-kicker{
+  display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;
+  color:var(--db24-red-deep);letter-spacing:2px;margin-bottom:8px;
+}
+.db24-sec-kicker::before{content:"";width:18px;height:2px;background:var(--db24-red)}
+.db24-sec-title{font-size:clamp(22px,3vw,31px);font-weight:800;letter-spacing:.4px;line-height:1.3}
+.db24-sec-title em{font-style:normal;color:var(--db24-red-deep)}
+.db24-sec-desc{font-size:14.5px;color:var(--db24-grey);max-width:560px;margin-top:8px}
+
+/* 首屏 */
+.db24-hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 78% -10%,rgba(255,59,71,.34),transparent 62%),
+    radial-gradient(700px 400px at 8% 110%,rgba(240,180,41,.16),transparent 60%),
+    linear-gradient(150deg,#101724 0%,#161f2e 48%,#0d1219 100%);
+}
+.db24-hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 78%);
+}
+.db24-hero-inner{
+  position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:58px 20px 66px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+}
+.db24-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1px;
+  border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 13px;color:#ffd8dc;
+  background:rgba(255,59,71,.12);margin-bottom:18px;
+}
+.db24-live-dot{width:7px;height:7px;border-radius:50%;background:var(--db24-red);box-shadow:0 0 0 0 rgba(255,59,71,.7);animation:db24Pulse 1.8s infinite}
+@keyframes db24Pulse{70%{box-shadow:0 0 0 9px rgba(255,59,71,0)}100%{box-shadow:0 0 0 0 rgba(255,59,71,0)}}
+.db24-hero h1{
+  font-size:clamp(30px,4.4vw,48px);line-height:1.16;letter-spacing:.5px;font-weight:800;
+  margin-bottom:16px;
+}
+.db24-hero h1 span{
+  background:linear-gradient(100deg,#ff6a4d,#ff3b47 52%,#f0b429);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.db24-hero-lead{font-size:15.5px;color:#c3ccdb;max-width:520px;margin-bottom:22px}
+.db24-hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.db24-btn-primary,.db24-btn-ghost{
+  border-radius:10px;padding:12px 22px;font-size:14.5px;font-weight:600;transition:.22s;display:inline-flex;align-items:center;gap:8px;
+}
+.db24-btn-primary{background:linear-gradient(135deg,var(--db24-red),var(--db24-red-deep));color:#fff;box-shadow:0 10px 26px rgba(255,59,71,.3)}
+.db24-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,59,71,.42)}
+.db24-btn-ghost{border:1px solid rgba(255,255,255,.24);color:#e8edf5}
+.db24-btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
+.db24-hero-stats{display:flex;gap:14px;flex-wrap:wrap}
+.db24-stat{
+  flex:1;min-width:118px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:13px 15px;
+}
+.db24-stat b{display:block;font-size:24px;font-weight:800;letter-spacing:.5px;color:#fff;line-height:1.2}
+.db24-stat b i{font-style:normal;font-size:13px;color:#ff8f8f;margin-left:2px}
+.db24-stat span{font-size:12px;color:#9dabbd;letter-spacing:.4px}
+
+/* 首屏视觉卡 */
+.db24-hero-visual{position:relative}
+.db24-hero-main{
+  border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 26px 60px rgba(0,0,0,.5);position:relative;aspect-ratio:16/10;background:#1b2334;
+}
+.db24-hero-main img{width:100%;height:100%;object-fit:cover}
+.db24-hero-main-tag{
+  position:absolute;top:12px;left:12px;background:var(--db24-red);color:#fff;font-size:12px;
+  padding:3px 10px;border-radius:6px;font-weight:600;letter-spacing:.5px;
+}
+.db24-hero-main-cap{
+  position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;font-size:14px;font-weight:600;
+  background:linear-gradient(transparent,rgba(6,9,14,.92));
+}
+.db24-hero-mini{
+  position:absolute;right:-14px;bottom:-26px;width:54%;border-radius:12px;overflow:hidden;
+  border:3px solid #0f141d;box-shadow:0 16px 36px rgba(0,0,0,.55);aspect-ratio:16/10;background:#232c3d;
+}
+.db24-hero-mini img{width:100%;height:100%;object-fit:cover}
+.db24-hero-mini span{
+  position:absolute;left:0;right:0;bottom:0;font-size:12px;padding:22px 10px 8px;color:#e9eef6;
+  background:linear-gradient(transparent,rgba(6,9,14,.9));
+}
+.db24-hero-float{
+  position:absolute;left:-10px;top:-16px;background:#fff;color:var(--db24-ink);border-radius:10px;
+  padding:8px 13px;font-size:12.5px;font-weight:700;box-shadow:0 12px 26px rgba(0,0,0,.35);
+  display:flex;align-items:center;gap:7px;z-index:3;
+}
+.db24-hero-float i{font-style:normal;color:var(--db24-red)}
+
+/* 深度解析 */
+.db24-about{background:var(--db24-white);border-bottom:1px solid var(--db24-line)}
+.db24-about-grid{display:grid;grid-template-columns:260px 1fr;gap:44px}
+.db24-about-side{position:sticky;top:150px;align-self:start}
+.db24-about-side h2{font-size:23px;line-height:1.35;font-weight:800;margin-bottom:14px}
+.db24-about-side p{font-size:13.5px;color:var(--db24-grey);margin-bottom:18px}
+.db24-about-chips{display:flex;flex-wrap:wrap;gap:8px}
+.db24-chip{
+  font-size:12.5px;padding:5px 11px;border-radius:999px;background:#f2f4f8;color:#43506a;
+  border:1px solid #e5e9f0;
+}
+.db24-about-body h3{font-size:17.5px;font-weight:700;margin:26px 0 10px;display:flex;align-items:center;gap:9px}
+.db24-about-body h3::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--db24-red)}
+.db24-about-body h3:first-child{margin-top:0}
+.db24-about-body p{font-size:14.8px;color:#39445a;margin-bottom:12px;text-align:justify}
+.db24-about-quote{
+  border-left:3px solid var(--db24-red);background:#fff7f7;padding:14px 18px;border-radius:0 10px 10px 0;
+  font-size:14px;color:#8a2530;margin:16px 0;
+}
+.db24-about-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.db24-about-num{background:#f7f8fb;border:1px solid #eceff4;border-radius:12px;padding:14px}
+.db24-about-num b{font-size:21px;font-weight:800;color:var(--db24-red-deep);display:block}
+.db24-about-num span{font-size:12.5px;color:var(--db24-grey)}
+
+/* 焦点视频 */
+.db24-focus{background:linear-gradient(180deg,#f4f5f7,#eef0f4)}
+.db24-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.db24-card{
+  background:#fff;border-radius:var(--db24-radius);overflow:hidden;border:1px solid var(--db24-line);
+  transition:transform .25s,box-shadow .25s;position:relative;
+}
+.db24-card:hover{transform:translateY(-4px);box-shadow:var(--db24-shadow)}
+.db24-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#202a3a}
+.db24-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.db24-card:hover .db24-thumb img{transform:scale(1.05)}
+.db24-thumb::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(8,11,17,.55));
+}
+.db24-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;
+  background:rgba(255,59,71,.92);display:grid;place-items:center;z-index:2;transition:.24s;
+  box-shadow:0 8px 22px rgba(255,59,71,.45);
+}
+.db24-play::before{content:"";border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent #fff;margin-left:3px}
+.db24-card:hover .db24-play{transform:translate(-50%,-50%) scale(1.1)}
+.db24-thumb-tag{
+  position:absolute;top:10px;left:10px;z-index:2;background:rgba(15,20,29,.72);color:#fff;
+  font-size:11.5px;padding:3px 9px;border-radius:5px;backdrop-filter:blur(4px);
+}
+.db24-thumb-time{
+  position:absolute;right:9px;bottom:9px;z-index:2;background:rgba(8,11,17,.78);color:#e9eef6;
+  font-size:11.5px;padding:1px 7px;border-radius:4px;
+}
+.db24-card-body{padding:14px 15px 15px}
+.db24-card-title{font-size:15.5px;font-weight:700;line-height:1.45;margin-bottom:7px}
+.db24-card-title:hover{color:var(--db24-red-deep)}
+.db24-card-desc{font-size:13px;color:var(--db24-grey);line-height:1.65;margin-bottom:11px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.db24-card-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:#8b94a4;flex-wrap:wrap}
+.db24-card-author{display:flex;align-items:center;gap:6px;font-weight:600;color:#4a5568}
+.db24-avatar{
+  width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;
+  color:#fff;font-weight:700;flex:none;
+}
+.db24-card-actions{display:flex;gap:8px;align-items:center}
+.db24-act{
+  display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#8b94a4;padding:3px 7px;border-radius:6px;transition:.2s;
+}
+.db24-act:hover{background:#f2f4f8;color:var(--db24-red-deep)}
+.db24-act.db24-on{color:var(--db24-red)}
+.db24-focus-big .db24-card-title{font-size:19px}
+.db24-focus-big .db24-card-desc{-webkit-line-clamp:3;font-size:13.5px}
+.db24-focus-side{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-content:start}
+
+/* 24小时时间线爆料 */
+.db24-timeline-sec{background:var(--db24-white)}
+.db24-timeline{position:relative;padding-left:30px}
+.db24-timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--db24-red),#e6eaf1)}
+.db24-tl-item{position:relative;padding-bottom:26px}
+.db24-tl-item:last-child{padding-bottom:0}
+.db24-tl-item::before{
+  content:"";position:absolute;left:-27px;top:6px;width:11px;height:11px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--db24-red);
+}
+.db24-tl-time{font-size:12.5px;font-weight:800;color:var(--db24-red-deep);letter-spacing:.6px;margin-bottom:4px}
+.db24-tl-title{font-size:15.5px;font-weight:700;margin-bottom:5px}
+.db24-tl-text{font-size:13.8px;color:#5a6478}
+.db24-tl-tags{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
+.db24-tl-tag{font-size:11.5px;background:#fff2f3;color:#c02a35;border-radius:5px;padding:2px 8px}
+
+/* 创作者 */
+.db24-creators{background:linear-gradient(180deg,#eef0f4,#f6f7f9)}
+.db24-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.db24-creator{
+  background:#fff;border:1px solid var(--db24-line);border-radius:var(--db24-radius);padding:20px;
+  transition:.25s;display:flex;flex-direction:column;
+}
+.db24-creator:hover{transform:translateY(-4px);box-shadow:var(--db24-shadow);border-color:#ffd4d8}
+.db24-creator-head{display:flex;align-items:center;gap:13px;margin-bottom:13px}
+.db24-creator-avatar{
+  width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:19px;font-weight:800;color:#fff;flex:none;
+}
+.db24-creator-name{font-size:16px;font-weight:800}
+.db24-creator-field{font-size:12.5px;color:var(--db24-red-deep);font-weight:600;margin-top:2px}
+.db24-creator-bio{font-size:13.3px;color:#5a6478;line-height:1.7;margin-bottom:14px;flex:1}
+.db24-creator-data{display:flex;gap:16px;font-size:12.5px;color:#8b94a4;border-top:1px dashed #e6eaf1;padding-top:12px}
+.db24-creator-data b{color:var(--db24-ink);font-size:14px;margin-right:3px}
+
+/* 评价 */
+.db24-reviews{background:var(--db24-ink);color:#e8edf5}
+.db24-reviews .db24-sec-kicker{color:#ff8f8f}
+.db24-reviews .db24-sec-desc{color:#93a0b4}
+.db24-review-grid{columns:3;column-gap:18px}
+.db24-review{
+  break-inside:avoid;background:#18202d;border:1px solid #253044;border-radius:13px;padding:17px 17px 15px;
+  margin-bottom:18px;transition:.25s;
+}
+.db24-review:hover{border-color:#3a4a63;transform:translateY(-3px)}
+.db24-review-text{font-size:13.8px;color:#c8d2e0;line-height:1.75;margin-bottom:12px}
+.db24-review-user{display:flex;align-items:center;gap:9px;font-size:12.5px;color:#8b98ab}
+.db24-review-user b{color:#e8edf5;font-size:13px}
+.db24-review-stars{color:var(--db24-gold);font-size:12px;letter-spacing:1px}
+
+/* 榜单 */
+.db24-rank{background:var(--db24-white)}
+.db24-rank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.db24-rank-col{background:#f8f9fb;border:1px solid var(--db24-line);border-radius:var(--db24-radius);padding:8px 4px}
+.db24-rank-head{
+  font-size:15px;font-weight:800;padding:12px 16px 10px;display:flex;align-items:center;gap:8px;
+}
+.db24-rank-head i{font-style:normal;font-size:16px}
+.db24-rank-row{
+  display:flex;align-items:center;gap:11px;padding:9px 16px;border-radius:8px;transition:.2s;
+}
+.db24-rank-row:hover{background:#fff;box-shadow:0 4px 12px rgba(15,20,29,.06)}
+.db24-rank-no{
+  width:21px;height:21px;border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:800;
+  background:#e6eaf1;color:#5a6478;flex:none;
+}
+.db24-rank-row:nth-child(2) .db24-rank-no{background:var(--db24-red);color:#fff}
+.db24-rank-row:nth-child(3) .db24-rank-no{background:#ff8f4d;color:#fff}
+.db24-rank-row:nth-child(4) .db24-rank-no{background:var(--db24-gold);color:#5a3c00}
+.db24-rank-name{font-size:13.5px;font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.db24-rank-score{font-size:12px;color:var(--db24-red-deep);font-weight:700}
+
+/* 灵感/攻略 */
+.db24-ideas{background:linear-gradient(160deg,#101724,#1a2434);color:#e8edf5}
+.db24-ideas .db24-sec-title{color:#fff}
+.db24-ideas .db24-sec-kicker{color:#ff8f8f}
+.db24-ideas .db24-sec-desc{color:#93a0b4}
+.db24-idea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.db24-idea{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--db24-radius);
+  padding:20px;transition:.25s;
+}
+.db24-idea:hover{background:rgba(255,255,255,.08);border-color:rgba(255,59,71,.45);transform:translateY(-4px)}
+.db24-idea-icon{font-size:22px;margin-bottom:10px}
+.db24-idea h3{font-size:15.5px;font-weight:700;margin-bottom:8px;color:#fff}
+.db24-idea p{font-size:13.3px;color:#a9b6c8;line-height:1.72}
+
+/* 企业动态 */
+.db24-news{background:var(--db24-white)}
+.db24-news-list{border-top:1px solid var(--db24-line)}
+.db24-news-item{
+  display:grid;grid-template-columns:96px 1fr auto;gap:18px;align-items:center;
+  padding:17px 8px;border-bottom:1px solid var(--db24-line);transition:.2s;
+}
+.db24-news-item:hover{background:#f8f9fb;padding-left:14px}
+.db24-news-date{font-size:12.5px;color:var(--db24-red-deep);font-weight:800;letter-spacing:.5px}
+.db24-news-title{font-size:14.8px;font-weight:600}
+.db24-news-title span{font-weight:400;color:#8b94a4;font-size:13px;margin-left:8px}
+.db24-news-more{font-size:12.5px;color:#8b94a4;white-space:nowrap}
+
+/* FAQ */
+.db24-faq{background:linear-gradient(180deg,#f4f5f7,#eef0f4)}
+.db24-faq-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.db24-faq-item{
+  background:#fff;border:1px solid var(--db24-line);border-radius:11px;overflow:hidden;transition:.2s;
+}
+.db24-faq-item[open]{border-color:#ffd4d8;box-shadow:0 6px 18px rgba(255,59,71,.08)}
+.db24-faq-item summary{
+  cursor:pointer;padding:15px 18px;font-size:14.8px;font-weight:600;list-style:none;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.db24-faq-item summary::-webkit-details-marker{display:none}
+.db24-faq-item summary::after{content:"+";font-size:18px;color:var(--db24-red);font-weight:400;transition:.2s}
+.db24-faq-item[open] summary::after{content:"−"}
+.db24-faq-item p{padding:0 18px 16px;font-size:13.8px;color:#5a6478;line-height:1.8}
+
+/* 合作品牌 */
+.db24-partners{background:var(--db24-white);border-top:1px solid var(--db24-line)}
+.db24-partner-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.db24-partner{
+  border:1px solid var(--db24-line);border-radius:10px;padding:13px 22px;font-size:14px;font-weight:700;
+  color:#4a5568;letter-spacing:.5px;transition:.2s;background:#fafbfc;
+}
+.db24-partner:hover{color:var(--db24-red-deep);border-color:#ffc9ce;transform:translateY(-2px);background:#fff}
+
+/* 联系/页脚 */
+.db24-footer{background:#0b1017;color:#8b98ab;padding:52px 0 0;font-size:13.3px}
+.db24-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:34px;padding-bottom:36px}
+.db24-footer h4{font-size:14px;color:#e8edf5;margin-bottom:14px;letter-spacing:.5px}
+.db24-footer p{line-height:1.85;margin-bottom:8px}
+.db24-footer a{color:#8b98ab;transition:.2s;display:block;margin-bottom:8px}
+.db24-footer a:hover{color:var(--db24-red)}
+.db24-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.db24-footer-bottom{
+  border-top:1px solid #1c2534;padding:18px 0;font-size:12.3px;color:#66738a;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+.db24-share-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.db24-share{
+  font-size:12px;border:1px solid #253044;border-radius:7px;padding:5px 11px;color:#b6c2d3;transition:.2s;
+}
+.db24-share:hover{border-color:var(--db24-red);color:#fff;background:rgba(255,59,71,.14)}
+
+/* 弹窗/Toast */
+.db24-modal-mask{
+  position:fixed;inset:0;background:rgba(8,11,17,.66);backdrop-filter:blur(3px);z-index:300;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.db24-modal-mask.db24-show{display:flex}
+.db24-modal{
+  background:#fff;border-radius:16px;max-width:460px;width:100%;padding:26px 24px 22px;position:relative;
+  animation:db24Pop .22s ease;
+}
+@keyframes db24Pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.db24-modal h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.db24-modal p{font-size:13.6px;color:var(--db24-grey);line-height:1.75;margin-bottom:16px}
+.db24-modal input,.db24-modal textarea{
+  width:100%;border:1px solid var(--db24-line);border-radius:9px;padding:10px 12px;font-size:13.6px;
+  font-family:inherit;outline:none;margin-bottom:11px;background:#fafbfc;
+}
+.db24-modal input:focus,.db24-modal textarea:focus{border-color:var(--db24-red);background:#fff}
+.db24-modal-close{
+  position:absolute;right:14px;top:12px;font-size:20px;color:#9aa4b3;line-height:1;padding:4px;
+}
+.db24-modal-close:hover{color:var(--db24-red)}
+.db24-modal-btn{
+  width:100%;background:linear-gradient(135deg,var(--db24-red),var(--db24-red-deep));color:#fff;
+  border-radius:9px;padding:11px;font-size:14px;font-weight:700;transition:.2s;
+}
+.db24-modal-btn:hover{opacity:.92}
+.db24-toast{
+  position:fixed;left:50%;bottom:36px;transform:translateX(-50%) translateY(16px);
+  background:#0f141d;color:#fff;font-size:13.5px;padding:11px 20px;border-radius:10px;z-index:400;
+  opacity:0;pointer-events:none;transition:.3s;box-shadow:0 14px 34px rgba(0,0,0,.34);
+}
+.db24-toast.db24-show{opacity:1;transform:translateX(-50%) translateY(0)}
+.db24-backtop{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:12px;
+  background:var(--db24-ink);color:#fff;display:grid;place-items:center;font-size:17px;z-index:200;
+  opacity:0;pointer-events:none;transition:.26s;box-shadow:0 10px 26px rgba(0,0,0,.3);
+}
+.db24-backtop.db24-show{opacity:1;pointer-events:auto}
+.db24-backtop:hover{background:var(--db24-red)}
+
+/* 移动导航 */
+.db24-mobile-nav{
+  display:none;background:#0f141d;border-top:1px solid rgba(255,255,255,.08);padding:10px 20px 16px;
+}
+.db24-mobile-nav.db24-show{display:block}
+.db24-mobile-nav a{
+  display:block;padding:11px 4px;font-size:14.5px;color:#c6cfdc;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.db24-mobile-nav a:last-child{border-bottom:none}
+
+/* 响应式 */
+@media(max-width:1000px){
+  .db24-hero-inner{grid-template-columns:1fr;gap:40px}
+  .db24-hero-visual{max-width:560px}
+  .db24-about-grid{grid-template-columns:1fr;gap:26px}
+  .db24-about-side{position:static}
+  .db24-focus-grid{grid-template-columns:1fr}
+  .db24-creator-grid{grid-template-columns:1fr 1fr}
+  .db24-rank-grid{grid-template-columns:1fr}
+  .db24-review-grid{columns:2}
+  .db24-footer-grid{grid-template-columns:1fr 1fr}
+  .db24-nav{display:none}
+  .db24-nav-toggle{display:block}
+  .db24-header-inner{justify-content:space-between}
+  .db24-search input{width:130px}
+}
+@media(max-width:680px){
+  .db24-section{padding:44px 0}
+  .db24-hero-inner{padding:40px 20px 52px}
+  .db24-hero-stats{gap:9px}
+  .db24-stat{min-width:96px;padding:10px 12px}
+  .db24-stat b{font-size:20px}
+  .db24-focus-side{grid-template-columns:1fr}
+  .db24-creator-grid{grid-template-columns:1fr}
+  .db24-review-grid{columns:1}
+  .db24-idea-grid{grid-template-columns:1fr}
+  .db24-footer-grid{grid-template-columns:1fr}
+  .db24-search{display:none}
+  .db24-btn-cta{padding:7px 11px;font-size:12.5px}
+  .db24-news-item{grid-template-columns:1fr;gap:5px}
+  .db24-about-nums{grid-template-columns:1fr}
+  .db24-hero-mini{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="db24-sticky-top">
+  <div class="db24-notice-bar">
+    <div class="db24-notice-inner">
+      <span class="db24-notice-tag">24H 爆料</span>
+      <div class="db24-notice-track">
+        <span>新增 <b>11 月 19 日深夜档</b> 赛事爆料速览 ｜ 官方发布「爆料汇总·第 247 期」已上线 ｜ 本周报名「24 小时挑战赛」创作者共创企划 ｜ 上传通道已开放，欢迎投稿你的现场一手画面 ｜&nbsp;</span>
+      </div>
+      <a class="db24-notice-more" href="#db24-timeline">查看时间线 ↓</a>
+    </div>
+  </div>
+
+  <header class="db24-header">
+    <div class="db24-header-inner">
+      <a class="db24-brand" href="#db24-home">
+        <div class="db24-brand-mark">24</div>
+        <div>
+          <div class="db24-brand-name">每日大赛24小时爆料汇总</div>
+          <div class="db24-brand-sub">Official Brand Video Portal</div>
+        </div>
+      </a>
+      <nav class="db24-nav">
+        <a href="#db24-home" class="db24-nav-active">首页</a>
+        <a href="#db24-focus">焦点影像</a>
+        <a href="#db24-timeline">24H 时间线</a>
+        <a href="#db24-creators">创作者</a>
+        <a href="#db24-reviews">用户口碑</a>
+        <a href="#db24-rank">榜单</a>
+        <a href="#db24-news">企业动态</a>
+        <a href="#db24-faq">帮助</a>
+      </nav>
+      <div class="db24-header-tools">
+        <div class="db24-search">
+          <input id="db24SearchInput" type="text" placeholder="搜索爆料 / 创作者" autocomplete="off">
+          <button class="db24-search-btn" id="db24SearchBtn" aria-label="搜索">⌕</button>
+          <div class="db24-search-hint" id="db24SearchHint"></div>
+        </div>
+        <button class="db24-btn-cta" id="db24SubmitBtn">我要投稿</button>
+        <button class="db24-nav-toggle" id="db24NavToggle" aria-label="展开导航">☰</button>
+      </div>
+    </div>
+    <div class="db24-mobile-nav" id="db24MobileNav">
+      <a href="#db24-home">首页</a>
+      <a href="#db24-focus">焦点影像</a>
+      <a href="#db24-timeline">24H 时间线</a>
+      <a href="#db24-creators">创作者</a>
+      <a href="#db24-reviews">用户口碑</a>
+      <a href="#db24-rank">榜单</a>
+      <a href="#db24-news">企业动态</a>
+      <a href="#db24-faq">帮助</a>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- 首屏 -->
+<section class="db24-hero" id="db24-home">
+  <div class="db24-hero-inner">
+    <div>
+      <span class="db24-hero-badge"><span class="db24-live-dot"></span>官方网站 · 24 小时持续更新中</span>
+      <h1>每日大赛<span>24小时爆料汇总</span></h1>
+      <p class="db24-hero-lead">以高清原创影像，记录每日大赛每一小时的高光、争议与幕后。我们是深耕赛事爆料垂直领域的视频品牌官方平台，用真实影像陪伴每一位关注赛场的人。</p>
+      <div class="db24-hero-btns">
+        <a class="db24-btn-primary" href="#db24-focus">▶ 观看焦点影像</a>
+        <a class="db24-btn-ghost" href="#db24-timeline">今日爆料时间线</a>
+        <a class="db24-btn-ghost" href="#db24-creators">认识创作者</a>
+      </div>
+      <div class="db24-hero-stats">
+        <div class="db24-stat"><b data-db24-count="12684">0</b><span>累计爆料条目</span></div>
+        <div class="db24-stat"><b data-db24-count="2380">0</b><span>入驻创作者</span></div>
+        <div class="db24-stat"><b data-db24-count="46">0</b><span>持续运营天数</span></div>
+      </div>
+    </div>
+    <div class="db24-hero-visual">
+      <div class="db24-hero-float">🔥 热度 <i>9.8w</i> · 汇总第 247 期</div>
+      <div class="db24-hero-main">
+        <img alt="每日大赛24小时爆料汇总主视觉：深夜赛场灯光与爆料镜头" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23121b2b'/%3E%3Cstop offset='1' stop-color='%232b1b2c'/%3E%3C/linearGradient%3E%3CradialGradient id='r1' cx='0.72' cy='0.25' r='0.55'%3E%3Cstop offset='0' stop-color='%23ff5a4d' stop-opacity='0.85'/%3E%3Cstop offset='1' stop-color='%23ff5a4d' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Crect width='800' height='500' fill='url(%23r1)'/%3E%3Cg opacity='0.85'%3E%3Cpath d='M0 400 L800 330 L800 500 L0 500 Z' fill='%230d1420'/%3E%3Cpath d='M80 392 L720 340' stroke='%23465a7a' stroke-width='2' stroke-dasharray='10 12' opacity='0.5'/%3E%3C/g%3E%3Cg fill='%23ffd0b0' opacity='0.9'%3E%3Ccircle cx='210' cy='330' r='15'/%3E%3Ccircle cx='585' cy='300' r='15'/%3E%3C/g%3E%3Cg fill='%23ff6a4d'%3E%3Crect x='196' y='345' width='28' height='52' rx='9'/%3E%3Crect x='571' y='315' width='28' height='52' rx='9'/%3E%3C/g%3E%3Cg stroke='%23ff3b47' stroke-width='3' fill='none' opacity='0.8'%3E%3Crect x='300' y='120' width='200' height='120' rx='14'/%3E%3C/g%3E%3Cg fill='%23e8f0ff' opacity='0.28'%3E%3Crect x='360' y='200' width='8' height='70' rx='4'/%3E%3Crect x='420' y='170' width='8' height='70' rx='4'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='0.15'%3E%3Ccircle cx='640' cy='110' r='52'/%3E%3Ccircle cx='150' cy='90' r='26'/%3E%3C/g%3E%3Ctext x='40' y='66' fill='%23ff8f8f' font-size='22' font-family='sans-serif' font-weight='bold'%3E24H%3C/text%3E%3C/svg%3E">
+        <span class="db24-hero-main-tag">焦点爆料</span>
+        <div class="db24-hero-main-cap">深夜突袭：第 247 期爆料上线前的 4 小时现场记录</div>
+      </div>
+      <div class="db24-hero-mini">
+        <img alt="每日大赛24小时爆料汇总副视觉：爆料者手持镜头特写" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 260'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23203a55'/%3E%3Cstop offset='1' stop-color='%23101824'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='420' height='260' fill='url(%23g2)'/%3E%3Cg fill='none' stroke='%234f6f96' stroke-width='3' opacity='0.7'%3E%3Ccircle cx='120' cy='120' r='46'/%3E%3Ccircle cx='120' cy='120' r='22'/%3E%3C/g%3E%3Cg fill='%23f0b429' opacity='0.9'%3E%3Crect x='230' y='66' width='120' height='12' rx='6'/%3E%3Crect x='230' y='98' width='90' height='12' rx='6'/%3E%3Crect x='230' y='130' width='140' height='12' rx='6'/%3E%3C/g%3E%3Cg fill='%23ff5a4d' opacity='0.85'%3E%3Ccircle cx='342' cy='206' r='20'/%3E%3C/g%3E%3C/svg%3E">
+        <span>爆料者镜头：我在现场的第 6 个小时</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="db24-section db24-about">
+  <div class="db24-wrap">
+    <div class="db24-about-grid">
+      <aside class="db24-about-side">
+        <div class="db24-sec-kicker">品牌解析</div>
+        <h2>关于每日大赛24小时爆料汇总</h2>
+        <p>一个以“小时”为单位运转的赛事爆料影像社区，用官方视角梳理每天发生的一切。</p>
+        <div class="db24-about-chips">
+          <span class="db24-chip">品牌故事</span>
+          <span class="db24-chip">内容生态</span>
+          <span class="db24-chip">原创高清</span>
+          <span class="db24-chip">行业观察</span>
+          <span class="db24-chip">社区共创</span>
+        </div>
+      </aside>
+      <div class="db24-about-body">
+        <h3>什么是“24 小时爆料汇总”</h3>
+        <p>每日大赛24小时爆料汇总，是一个围绕赛事现场与场外信息而建立的视频品牌官方网站。我们不做单向的赛事播报，而是把一天拆成 24 个时间节点，由平台编辑团队与入驻创作者一起，把每一个小时里值得被看见的瞬间记录下来：一次出人意料的翻转、一段赛后通道里的对话、一位新人在镜头前的紧张，以及技术台、检录处、观众席这些通常不会出现在正式镜头里的角落。我们相信，赛事真正的质感藏在这些细碎的时间里。</p>
+        <p>作为一个持续运营的垂直领域内容平台，我们对“爆料”有一套自己的理解：它不等于未经核实的传闻，而是对现场信息的及时、准确、可追溯的整理。每一条进入汇总的影像，都会经过来源标注、时间校准与基本事实核对；我们会明确告诉你哪些是官方确认的信息，哪些是创作者的个人观察，哪些仍在等待进一步核实。这种克制，是我们在行业里积累口碑的基础。</p>
+        <h3>我们如何组织每天的内容</h3>
+        <p>页面中的“24H 时间线”是整个内容生态的核心。它从当日 00:00 开始，按小时推进，重要节点会附上对应的影像与简短说明。时间线之上是“焦点影像”，我们从中挑出 2 至 4 条最具代表性的内容做重点呈现；时间线之下则是创作者矩阵、用户口碑与榜单，让不同身份的人都能找到自己的入口。这样的结构看起来简单，但背后是编辑、剪辑、审核与社区运营四条线同时推进的结果。</p>
+        <p>我们也特别重视“人”的部分。赛事爆料不是冷冰冰的信息搬运，它由一群有判断力、有耐心的创作者共同完成。有人擅长在嘈杂的现场捕捉一句关键的话，有人擅长把零散的画面剪成有节奏的短片，也有人专门做赛后复盘与规则解读。官方会为这些创作者提供素材库、剪辑工具与曝光位，但不会替他们决定视角。</p>
+        <div class="db24-about-quote">“把每一天当作一期节目来做，把每一小时当作一个镜头来对待。”这是平台编辑团队内部最常被提起的一句话，也是我们理解赛事爆料的方式。</div>
+        <h3>关于品质与责任</h3>
+        <p>作为企业级视频品牌，我们坚持原创与正版：所有包装、片头、字体与配乐均使用已授权素材，创作者上传的内容需承诺原创或已获授权。我们对画质有明确要求，鼓励高清及以上规格上传，并在播放端提供多档清晰度适配。与此同时，我们设立了举报与反馈通道，对不实信息、侵犯隐私、恶意剪辑等内容执行快速处理机制。我们希望这个平台既能保持社区活力，也能守住基本的边界。</p>
+        <p>内容生态的成长需要时间。过去的时间里，我们从一条时间线、几十位创作者开始，逐步扩展到今天的规模。未来，我们会继续在赛事爆料的垂直领域深耕，完善选题机制、创作工具与社区规则，让“每日大赛24小时爆料汇总”成为用户首选的信息与影像入口，也成为创作者值得信赖的长期伙伴。</p>
+        <div class="db24-about-nums">
+          <div class="db24-about-num"><b>24h</b><span>全天候内容更新机制</span></div>
+          <div class="db24-about-num"><b>96%</b><span>爆料来源可追溯比例</span></div>
+          <div class="db24-about-num"><b>4.8/5</b><span>社区用户综合口碑评分</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 焦点影像 -->
+<section class="db24-section db24-focus" id="db24-focus">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">焦点影像</div>
+        <h2 class="db24-sec-title">今日<em>精选爆料</em>与现场短片</h2>
+        <p class="db24-sec-desc">由编辑团队从 24 小时时间线中挑选，兼顾信息密度与画面质感。点击可收藏、点赞或查看评论。</p>
+      </div>
+      <a class="db24-btn-ghost" style="border-color:#d5dae3;color:#4a5568" href="#db24-timeline">浏览完整时间线 →</a>
+    </div>
+
+    <div class="db24-focus-grid">
+      <article class="db24-card db24-focus-big" data-db24-id="f1">
+        <div class="db24-thumb">
+          <img alt="焦点影像封面：第247期爆料汇总深夜版现场灯光" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23151f30'/%3E%3Cstop offset='0.6' stop-color='%232a2036'/%3E%3Cstop offset='1' stop-color='%23101622'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1g)'/%3E%3Cg opacity='0.9'%3E%3Cpath d='M0 340 L800 300 L800 450 L0 450Z' fill='%230d1420'/%3E%3C/g%3E%3Cg fill='%23ff5a4d' opacity='0.9'%3E%3Ccircle cx='640' cy='120' r='34'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='0.16'%3E%3Crect x='90' y='90' width='240' height='150' rx='18'/%3E%3C/g%3E%3Cg fill='none' stroke='%23f0b429' stroke-width='3' opacity='0.75'%3E%3Cpath d='M120 300 L300 210 L460 260 L660 170'/%3E%3C/g%3E%3Cg fill='%23ffd0b0'%3E%3Ccircle cx='120' cy='300' r='8'/%3E%3Ccircle cx='300' cy='210' r='8'/%3E%3Ccircle cx='460' cy='260' r='8'/%3E%3Ccircle cx='660' cy='170' r='8'/%3E%3C/g%3E%3Ctext x='90' y='150' fill='%23ff8f8f' font-size='26' font-family='sans-serif' font-weight='bold'%3E24H REPORT%3C/text%3E%3C/svg%3E">
+          <span class="db24-thumb-tag">官方汇总</span>
+          <div class="db24-play"></div>
+          <span class="db24-thumb-time">18:42</span>
+        </div>
+        <div class="db24-card-body">
+          <h3 class="db24-card-title">第 247 期｜从检录处到看台：一场赛事开赛前的 6 小时</h3>
+          <p class="db24-card-desc">我们把镜头交给三位驻场创作者，从清晨的场地布置跟到观众入场，记录下开场哨响之前最容易被忽略的六小时。片中包含了道闸系统调试、志愿者动员与一组未被采用的备用机位画面。</p>
+          <div class="db24-card-meta">
+            <span class="db24-card-author"><span class="db24-avatar" style="background:#d81f2c">赛</span>赛场观察员·阿岚</span>
+            <div class="db24-card-actions">
+              <button class="db24-act" data-db24-like>♡ <span>1286</span></button>
+              <button class="db24-act" data-db24-fav>☆ 收藏</button>
+              <button class="db24-act" data-db24-comment>💬 214</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="db24-focus-side">
+        <article class="db24-card" data-db24-id="f2">
+          <div class="db24-thumb">
+            <img alt="焦点影像小卡：赛后通道内选手与教练对话现场" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Cdefs%3E%3ClinearGradient id='f2g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f2c40'/%3E%3Cstop offset='1' stop-color='%23323a2a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='225' fill='url(%23f2g)'/%3E%3Cg fill='%23f0b429' opacity='0.8'%3E%3Crect x='40' y='150' width='120' height='10' rx='5'/%3E%3Crect x='40' y='170' width='80' height='10' rx='5'/%3E%3C/g%3E%3Cg fill='%23ff5a4d' opacity='0.85'%3E%3Ccircle cx='310' cy='80' r='26'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='0.18'%3E%3Cpath d='M200 60 L260 100 L200 140 L140 100Z'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="db24-thumb-tag">人物访谈</span>
+            <div class="db24-play"></div>
+            <span class="db24-thumb-time">09:16</span>
+          </div>
+          <div class="db24-card-body">
+            <h3 class="db24-card-title">赛后通道里的三分钟：教练说了什么</h3>
+            <p class="db24-card-desc">一段没有剪辑的现场录音，配以慢镜头画面。</p>
+            <div class="db24-card-meta">
+              <span class="db24-card-author"><span class="db24-avatar" style="background:#2f5d9e">场</span>场边声场</span>
+              <div class="db24-card-actions">
+                <button class="db24-act" data-db24-like>♡ <span>642</span></button>
+                <button class="db24-act" data-db24-fav>☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="db24-card" data-db24-id="f3">
+          <div class="db24-thumb">
+            <img alt="焦点影像小卡：技术台回放系统操作细节" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Cdefs%3E%3ClinearGradient id='f3g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232b2338'/%3E%3Cstop offset='1' stop-color='%23131822'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='225' fill='url(%23f3g)'/%3E%3Cg stroke='%234f7fa8' stroke-width='2' fill='none' opacity='0.8'%3E%3Crect x='60' y='50' width='120' height='80' rx='8'/%3E%3Crect x='210' y='50' width='120' height='80' rx='8'/%3E%3C/g%3E%3Cg fill='%23ff5a4d'%3E%3Ccircle cx='120' cy='170' r='10'/%3E%3Ccircle cx='270' cy='170' r='10'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='0.13'%3E%3Crect x='60' y='50' width='270' height='80' rx='8'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="db24-thumb-tag">行业观察</span>
+            <div class="db24-play"></div>
+            <span class="db24-thumb-time">07:05</span>
+          </div>
+          <div class="db24-card-body">
+            <h3 class="db24-card-title">技术台视角：一次回放判定是怎么完成的</h3>
+            <p class="db24-card-desc">拆解回放系统的操作流程与判定逻辑。</p>
+            <div class="db24-card-meta">
+              <span class="db24-card-author"><span class="db24-avatar" style="background:#3f7a54">技</span>技术台笔记</span>
+              <div class="db24-card-actions">
+                <button class="db24-act" data-db24-like>♡ <span>398</span></button>
+                <button class="db24-act" data-db24-fav>☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="db24-card" data-db24-id="f4">
+          <div class="db24-thumb">
+            <img alt="焦点影像小卡：观众席第一排的欢呼瞬间" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Cdefs%3E%3ClinearGradient id='f4g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%2343321f'/%3E%3Cstop offset='1' stop-color='%231b2230'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='225' fill='url(%23f4g)'/%3E%3Cg fill='%23ffcf6b' opacity='0.85'%3E%3Ccircle cx='90' cy='80' r='22'/%3E%3Ccircle cx='150' cy='70' r='22'/%3E%3Ccircle cx='210' cy='85' r='22'/%3E%3C/g%3E%3Cg fill='%23ff5a4d' opacity='0.75'%3E%3Crect x='60' y='120' width='290' height='9' rx='4.5'/%3E%3Crect x='60' y='145' width='220' height='9' rx='4.5'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="db24-thumb-tag">社区瞬间</span>
+            <div class="db24-play"></div>
+            <span class="db24-thumb-time">05:48</span>
+          </div>
+          <div class="db24-card-body">
+            <h3 class="db24-card-title">看台第一排：他们的表情比比分更有戏</h3>
+            <p class="db24-card-desc">一组没有旁白的观众席特写。</p>
+            <div class="db24-card-meta">
+              <span class="db24-card-author"><span class="db24-avatar" style="background:#8a4bbd">观</span>看台视角</span>
+              <div class="db24-card-actions">
+                <button class="db24-act" data-db24-like>♡ <span>517</span></button>
+                <button class="db24-act" data-db24-fav>☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 24H 时间线 -->
+<section class="db24-section db24-timeline-sec" id="db24-timeline">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">24H 时间线</div>
+        <h2 class="db24-sec-title">11 月 19 日 · <em>逐小时爆料</em>记录</h2>
+        <p class="db24-sec-desc">以下条目按当日时间顺序整理，标注来源类型。仍在核实中的信息会明确标出，不作为最终结论。</p>
+      </div>
+      <button class="db24-btn-cta" id="db24CopyBtn">复制本页链接</button>
+    </div>
+
+    <div class="db24-timeline">
+      <div class="db24-tl-item">
+        <div class="db24-tl-time">06:00 · 官方确认</div>
+        <h3 class="db24-tl-title">场地开闸与第一轮设备巡检完成</h3>
+        <p class="db24-tl-text">官方工作人员确认，主赛场与两块副场地的照明、扩声与回放系统已完成第一轮巡检，无异常记录。驻场创作者拍摄了巡检全过程，素材已进入素材库编号 D247-06。</p>
+        <div class="db24-tl-tags"><span class="db24-tl-tag">官方发布</span><span class="db24-tl-tag">幕后</span><span class="db24-tl-tag">技术</span></div>
+      </div>
+      <div class="db24-tl-item">
+        <div class="db24-tl-time">09:00 · 创作者观察</div>
+        <h3 class="db24-tl-title">报名名单更新，两位新人首次进入主赛名单</h3>
+        <p class="db24-tl-text">根据现场公示的信息，主赛名单新增两位首次参赛的选手。创作者“场边声场”在通道内完成了简短采访，内容涉及赛前准备与心态调整，完整片段可在焦点影像区查看。</p>
+        <div class="db24-tl-tags"><span class="db24-tl-tag">名单</span><span class="db24-tl-tag">新人</span></div>
+      </div>
+      <div class="db24-tl-item">
+        <div class="db24-tl-time">12:30 · 官方确认</div>
+        <h3 class="db24-tl-title">午间场次时间微调，官方公告已同步</h3>
+        <p class="db24-tl-text">因前序场次延时，午间两场对决顺延约 15 分钟。官方已发布调整公告，建议观众以现场广播与大屏提示为准。平台同步更新了时间线，避免信息不同步带来的误解。</p>
+        <div class="db24-tl-tags"><span class="db24-tl-tag">公告</span><span class="db24-tl-tag">赛程</span></div>
+      </div>
+      <div class="db24-tl-item">
+        <div class="db24-tl-time">15:10 · 待核实</div>
+        <h3 class="db24-tl-title">关于一次判罚争议的多角度画面</h3>
+        <p class="db24-tl-text">网络流传一段判罚争议画面，平台已收集三个不同机位的素材进行比对。目前版本存在剪辑痕迹，暂不作为结论发布。技术台笔记栏目将在核实完成后发布拆解分析，请以官方通报为准。</p>
+        <div class="db24-tl-tags"><span class="db24-tl-tag">核实中</span><span class="db24-tl-tag">判罚</span></div>
+      </div>
+      <div class="db24-tl-item">
+        <div class="db24-tl-time">18:40 · 创作者观察</div>
+        <h3 class="db24-tl-title">晚间高峰入场，社区共创短片的拍摄现场</h3>
+        <p class="db24-tl-text">平台发起的“24 小时挑战赛”共创企划今日进入拍摄阶段，十余位创作者在入场通道完成了分段取景。片段将在汇总第 247 期中以集合短片形式呈现，报名仍在开放中。</p>
+        <div class="db24-tl-tags"><span class="db24-tl-tag">共创</span><span class="db24-tl-tag">报名</span><span class="db24-tl-tag">挑战赛</span></div>
+      </div>
+      <div class="db24-tl-item">
+        <div class="db24-tl-time">22:20 · 官方确认</div>
+        <h3 class="db24-tl-title">当日汇总第 247 期正式上线</h3>
+        <p class="db24-tl-text">第 247 期汇总已完成包装并上线，包含 18 条影像与 6 篇文字摘要。官方提示：本期内容中标注“待核实”的条目将在核实后于企业动态中更新说明，欢迎通过反馈入口提交补充线索。</p>
+        <div class="db24-tl-tags"><span class="db24-tl-tag">正式上线</span><span class="db24-tl-tag">汇总</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 创作者矩阵 -->
+<section class="db24-section db24-creators" id="db24-creators">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">创作者矩阵</div>
+        <h2 class="db24-sec-title">在<em>赛场内外</em>持续产出的人</h2>
+        <p class="db24-sec-desc">他们来自不同背景，用各自的视角补全每天 24 小时的画面。点击卡片可查看简介与作品概况。</p>
+      </div>
+      <a class="db24-btn-ghost" style="border-color:#d5dae3;color:#4a5568" href="#db24-rank">查看创作者榜单 →</a>
+    </div>
+
+    <div class="db24-creator-grid">
+      <article class="db24-creator" data-db24-creator="阿岚" data-db24-desc="驻场创作者，擅长在赛事开场前记录场地与人的细节，作品以长镜头与现场声见长。累计发布 186 部短片，参与 42 期汇总。">
+        <div class="db24-creator-head">
+          <div class="db24-creator-avatar" style="background:linear-gradient(135deg,#d81f2c,#ff6a4d)">岚</div>
+          <div>
+            <div class="db24-creator-name">赛场观察员·阿岚</div>
+            <div class="db24-creator-field">现场记录 / 长镜头</div>
+          </div>
+        </div>
+        <p class="db24-creator-bio">习惯提前两小时到场，先看人再看赛。她的镜头里总有观众席与通道的角落，被认为是最会拍“等待”的创作者。</p>
+        <div class="db24-creator-data"><span><b>186</b>作品</span><span><b>5.2w</b>粉丝</span><span><b>42</b>期汇总</span></div>
+      </article>
+
+      <article class="db24-creator" data-db24-creator="声场" data-db24-desc="专注于现场声音与人物访谈的创作者，擅长把对话剪成有节奏的叙事，作品多次进入焦点影像。累计发布 142 部作品。">
+        <div class="db24-creator-head">
+          <div class="db24-creator-avatar" style="background:linear-gradient(135deg,#2f5d9e,#4f9fd8)">声</div>
+          <div>
+            <div class="db24-creator-name">场边声场</div>
+            <div class="db24-creator-field">人物访谈 / 声音叙事</div>
+          </div>
+        </div>
+        <p class="db24-creator-bio">相信“先听到，再看到”。他常带着一支指向性麦在通道里蹲守，记录下许多赛后三分钟的对话。</p>
+        <div class="db24-creator-data"><span><b>142</b>作品</span><span><b>3.8w</b>粉丝</span><span><b>31</b>期汇总</span></div>
+      </article>
+
+      <article class="db24-creator" data-db24-creator="技术台" data-db24-desc="由技术岗背景创作者组成的账号，专注规则解读、回放分析与数据整理，内容偏硬核，是行业观察类内容的稳定来源。">
+        <div class="db24-creator-head">
+          <div class="db24-creator-avatar" style="background:linear-gradient(135deg,#3f7a54,#7dbd8c)">技</div>
+          <div>
+            <div class="db24-creator-name">技术台笔记</div>
+            <div class="db24-creator-field">规则解读 / 回放分析</div>
+          </div>
+        </div>
+        <p class="db24-creator-bio">把复杂的判定流程讲清楚，是这个账号的执念。每期汇总都会配一张手绘流程图，被用户称为“看懂比赛的说明书”。</p>
+        <div class="db24-creator-data"><span><b>97</b>作品</span><span><b>2.6w</b>粉丝</span><span><b>28</b>期汇总</span></div>
+      </article>
+
+      <article class="db24-creator" data-db24-creator="看台" data-db24-desc="以观众视角记录赛事氛围的创作者，作品多为特写与短剪，擅长捕捉情绪瞬间，是社区互动最活跃的账号之一。">
+        <div class="db24-creator-head">
+          <div class="db24-creator-avatar" style="background:linear-gradient(135deg,#8a4bbd,#c08be0)">台</div>
+          <div>
+            <div class="db24-creator-name">看台视角</div>
+            <div class="db24-creator-field">观众记录 / 情绪特写</div>
+          </div>
+        </div>
+        <p class="db24-creator-bio">她说自己拍的不是比赛，是看比赛的人。作品里常有欢呼、沉默与拥抱，评论区总有人说“这就是我”。</p>
+        <div class="db24-creator-data"><span><b>214</b>作品</span><span><b>6.1w</b>粉丝</span><span><b>39</b>期汇总</span></div>
+      </article>
+
+      <article class="db24-creator" data-db24-creator="小满" data-db24-desc="新人创作者，以手机拍摄为主，内容真实、节奏轻快，擅长把一天里的小事剪成有呼吸感的短片。">
+        <div class="db24-creator-head">
+          <div class="db24-creator-avatar" style="background:linear-gradient(135deg,#e08a1e,#f0c04a)">满</div>
+          <div>
+            <div class="db24-creator-name">小满在现场</div>
+            <div class="db24-creator-field">新人记录 / 手机影像</div>
+          </div>
+        </div>
+        <p class="db24-creator-bio">第一次投稿就被选入汇总的新人。她的画面不完美，却有一种难得的松弛感，很多用户说看完会想起自己第一次看比赛的样子。</p>
+        <div class="db24-creator-data"><span><b>36</b>作品</span><span><b>8.4k</b>粉丝</span><span><b>7</b>期汇总</span></div>
+      </article>
+
+      <article class="db24-creator" data-db24-creator="剪辑" data-db24-desc="专注赛后复盘与剪辑拆解的创作者，擅长用结构化的方式重现关键时刻，是攻略类内容的常驻作者。">
+        <div class="db24-creator-head">
+          <div class="db24-creator-avatar" style="background:linear-gradient(135deg,#2b3b55,#5b7799)">剪</div>
+          <div>
+            <div class="db24-creator-name">复盘剪辑室</div>
+            <div class="db24-creator-field">赛后复盘 / 剪辑拆解</div>
+          </div>
+        </div>
+        <p class="db24-creator-bio">把 90 分钟压成 8 分钟，还要让每一秒都有信息量。他会在片尾附上素材来源与时间码，方便观众自行对照。</p>
+        <div class="db24-creator-data"><span><b>121</b>作品</span><span><b>4.4w</b>粉丝</span><span><b>25</b>期汇总</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评价 -->
+<section class="db24-section db24-reviews" id="db24-reviews">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">用户口碑</div>
+        <h2 class="db24-sec-title" style="color:#fff">来自<em>社区</em>的真实声音</h2>
+        <p class="db24-sec-desc">每条评价来自不同身份的观众与创作者，语气与关注点各不相同。我们保留原文，不做统一润色。</p>
+      </div>
+    </div>
+    <div class="db24-review-grid">
+      <div class="db24-review">
+        <p class="db24-review-text">每天下班路上先刷一遍时间线，已经成了习惯。最喜欢的是它会把“还在核实”标出来，不会为了抢速度把没确认的东西当成结论发。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#d81f2c">周</span><div><b>周先生</b><div class="db24-review-stars">★★★★★</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">作为一个小创作者，第一次投稿能被编辑回信就已经很开心了。后来那期汇总里出现了我的片段，虽然只有十几秒，但我截了图存到现在。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#2f5d9e">林</span><div><b>林小满</b><div class="db24-review-stars">★★★★★</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">技术台笔记那几期真的救了命。以前看回放判定完全不懂，现在至少知道他们在看什么、为什么看那么久。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#3f7a54">何</span><div><b>何同学</b><div class="db24-review-stars">★★★★☆</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">画质是真的好，尤其是现场声收录，戴耳机看完全是另一种体验。希望以后能多一些完整版的长片，碎片化的短片有点不过瘾。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#8a4bbd">苏</span><div><b>苏打水</b><div class="db24-review-stars">★★★★★</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">页面信息量挺大，但结构清楚，时间线我很喜欢，一眼就能知道今天发生了什么。就是晚上高峰期加载稍慢，希望能优化下。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#e08a1e">陈</span><div><b>陈默</b><div class="db24-review-stars">★★★★☆</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">我带我爸一起看，他平时不看这些，现在每天问我“今天更新了没有”。看台视角那些观众特写他很喜欢，说拍得有人情味。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#c0392b">吴</span><div><b>吴一鸣</b><div class="db24-review-stars">★★★★★</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">投稿流程比想象中简单，上传之后有进度提示，审核结果也写得比较具体，不会只说“未通过”。这点对新人很友好。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#2b3b55">郑</span><div><b>郑好</b><div class="db24-review-stars">★★★★☆</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">我关注的是它的态度。有一次争议事件，平台压了一天没发，后来出的复盘把三个机位都放出来了，看完反而更信它了。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#4f7fa8">许</span><div><b>许文舟</b><div class="db24-review-stars">★★★★★</div></div></div>
+      </div>
+      <div class="db24-review">
+        <p class="db24-review-text">希望挑战赛能多办几次，上次报名没赶上，看到大家拍的集合短片挺心动的。下次一定提前定闹钟。</p>
+        <div class="db24-review-user"><span class="db24-avatar" style="background:#7a5cc0">钱</span><div><b>钱多多</b><div class="db24-review-stars">★★★★☆</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 榜单 -->
+<section class="db24-section db24-rank" id="db24-rank">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">数据榜单</div>
+        <h2 class="db24-sec-title">本周<em>热度 · 新人 · 口碑</em>三榜</h2>
+        <p class="db24-sec-desc">榜单按本周互动与完播数据综合计算，每日更新一次。新人榜仅统计入驻不足 90 天的创作者。</p>
+      </div>
+    </div>
+    <div class="db24-rank-grid">
+      <div class="db24-rank-col">
+        <div class="db24-rank-head"><i>🔥</i>热度榜</div>
+        <div class="db24-rank-row"><span class="db24-rank-no">1</span><span class="db24-rank-name">第 247 期｜开赛前的 6 小时</span><span class="db24-rank-score">9.8w</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">2</span><span class="db24-rank-name">赛后通道里的三分钟</span><span class="db24-rank-score">7.2w</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">3</span><span class="db24-rank-name">看台第一排的表情特写</span><span class="db24-rank-score">6.4w</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">4</span><span class="db24-rank-name">技术台视角：回放判定拆解</span><span class="db24-rank-score">5.1w</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">5</span><span class="db24-rank-name">共创短片《二十四格》预告</span><span class="db24-rank-score">4.7w</span></div>
+      </div>
+      <div class="db24-rank-col">
+        <div class="db24-rank-head"><i>🌱</i>新人榜</div>
+        <div class="db24-rank-row"><span class="db24-rank-no">1</span><span class="db24-rank-name">小满在现场</span><span class="db24-rank-score">↑12</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">2</span><span class="db24-rank-name">夜班检录员</span><span class="db24-rank-score">↑9</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">3</span><span class="db24-rank-name">一只跟拍猫</span><span class="db24-rank-score">↑7</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">4</span><span class="db24-rank-name">场外第三排</span><span class="db24-rank-score">↑6</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">5</span><span class="db24-rank-name">慢半拍剪辑</span><span class="db24-rank-score">↑4</span></div>
+      </div>
+      <div class="db24-rank-col">
+        <div class="db24-rank-head"><i>🏅</i>口碑榜</div>
+        <div class="db24-rank-row"><span class="db24-rank-no">1</span><span class="db24-rank-name">技术台笔记</span><span class="db24-rank-score">4.9</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">2</span><span class="db24-rank-name">赛场观察员·阿岚</span><span class="db24-rank-score">4.8</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">3</span><span class="db24-rank-name">看台视角</span><span class="db24-rank-score">4.8</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">4</span><span class="db24-rank-name">复盘剪辑室</span><span class="db24-rank-score">4.7</span></div>
+        <div class="db24-rank-row"><span class="db24-rank-no">5</span><span class="db24-rank-name">场边声场</span><span class="db24-rank-score">4.6</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 灵感/攻略 -->
+<section class="db24-section db24-ideas">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">创作灵感</div>
+        <h2 class="db24-sec-title">给想拍点什么的你，<em>六个小建议</em></h2>
+        <p class="db24-sec-desc">这些建议来自平台编辑与驻场创作者的日常交流，不保证拍出爆款，但至少能让你的素材更有机会被看见。</p>
+      </div>
+    </div>
+    <div class="db24-idea-grid">
+      <div class="db24-idea">
+        <div class="db24-idea-icon">🎯</div>
+        <h3>先定一个“小时的切口”</h3>
+        <p>不要试图拍完整一天。选一个具体时间点，比如“开赛前 60 分钟”，把所有注意力放在这 60 分钟里，素材会更集中，剪辑也更有方向。</p>
+      </div>
+      <div class="db24-idea">
+        <div class="db24-idea-icon">🎙</div>
+        <h3>声音比画面更容易留下记忆</h3>
+        <p>现场的环境声、脚步、广播、观众的呼吸，都是很有价值的素材。如果条件允许，尽量单独录一条音频轨，后期会省很多事。</p>
+      </div>
+      <div class="db24-idea">
+        <div class="db24-idea-icon">🧭</div>
+        <h3>给镜头一个“为什么”</h3>
+        <p>每个镜头开拍前问自己一句：我为什么拍它？如果答不上来，可能只是好看，但不足以进入汇总。信息与情绪至少占一样。</p>
+      </div>
+      <div class="db24-idea">
+        <div class="db24-idea-icon">✂️</div>
+        <h3>短片的开头三秒决定去留</h3>
+        <p>不要在开头放长时间的黑场或 logo。用一个动作、一句对话或一个反常的画面直接进入，观众的耐心比想象中更短。</p>
+      </div>
+      <div class="db24-idea">
+        <div class="db24-idea-icon">📌</div>
+        <h3>标注来源，是对自己负责</h3>
+        <p>引用他人素材时请注明出处与授权情况。平台在审核时会重点查看这一点，清晰的标注也能让作品更容易被信任。</p>
+      </div>
+      <div class="db24-idea">
+        <div class="db24-idea-icon">🤝</div>
+        <h3>多和同好一起拍</h3>
+        <p>一人负责画面、一人负责声音、一人负责记录时间码，效率会明显提高。社区里有很多愿意一起合作的创作者，报名共创企划就能遇到。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 企业动态 -->
+<section class="db24-section db24-news" id="db24-news">
+  <div class="db24-wrap">
+    <div class="db24-sec-head">
+      <div>
+        <div class="db24-sec-kicker">企业动态</div>
+        <h2 class="db24-sec-title">官方<em>发布与更新</em>日志</h2>
+        <p class="db24-sec-desc">平台规则、栏目调整与活动信息会在这里同步，建议创作者定期查看。</p>
+      </div>
+    </div>
+    <div class="db24-news-list">
+      <div class="db24-news-item">
+        <div class="db24-news-date">2026.11.19</div>
+        <div class="db24-news-title">汇总第 247 期上线<span>新增 18 条影像与 6 篇文字摘要，含 1 条待核实条目</span></div>
+        <a class="db24-news-more" href="#db24-timeline">查看 →</a>
+      </div>
+      <div class="db24-news-item">
+        <div class="db24-news-date">2026.11.17</div>
+        <div class="db24-news-title">“24 小时挑战赛”共创企划开放报名<span>面向所有入驻创作者，报名截止 11 月 30 日</span></div>
+        <a class="db24-news-more" href="#db24-creators">了解 →</a>
+      </div>
+      <div class="db24-news-item">
+        <div class="db24-news-date">2026.11.12</div>
+        <div class="db24-news-title">内容审核细则更新说明<span>进一步明确转载、二次剪辑与授权标注的要求</span></div>
+        <a class="db24-news-more" href="#db24-faq">阅读 →</a>
+      </div>
+      <div class="db24-news-item">
+        <div class="db24-news-date">2026.11.05</div>
+        <div class="db24-news-title">播放端支持多档清晰度切换<span>高清及以上素材将获得更好的播放适配</span></div>
+        <a class="db24-news-more" href="#db24-home">查看 →</a>
+      </div>
+      <div class="db24-news-item">
+        <div class="db24-news-date">2026.10.28</div>
+        <div class="db24-news-title">新增“技术台笔记”常驻栏目<span>每周至少更新两期规则解读内容</span></div>
+        <a class="db24-news-more" href="#db24-focus">查看 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="db24-section db24-faq" id="db24-faq">
+  <div class="db24-wrap">
+    <div class="db24-sec-head" style="justify-content:center;text-align:center">
+      <div>
+        <div class="db24-sec-kicker" style="justify-content:center">帮助中心</div>
+        <h2 class="db24-sec-title">关于<em>爆料汇总</em>的常见问题</h2>
+        <p class="db24-sec-desc" style="margin-left:auto;margin-right:auto">如果这里没有你要的答案，可以通过页面底部的联系入口提交问题，我们会在两个工作日内回复。</p>
+      </div>
+    </div>
+    <div class="db24-faq-list">
+      <details class="db24-faq-item" open>
+        <summary>“24 小时爆料汇总”多久更新一次？</summary>
+        <p>时间线按小时推进，重要节点会即时更新；每日汇总成片通常在当日 22:00 前后上线。遇到赛事集中或信息量较大的日子，可能会增加一次补充更新，具体以公告条与企业动态为准。</p>
+      </details>
+      <details class="db24-faq-item">
+        <summary>如何判断一条爆料是否可靠？</summary>
+        <p>每条条目都会标注来源类型，分为“官方确认”“创作者观察”“待核实”三类。标注“待核实”的内容会说明争议点与当前进展，并明确不作为最终结论。我们建议观众结合多条信息自行判断，也欢迎通过反馈入口提供线索。</p>
+      </details>
+      <details class="db24-faq-item">
+        <summary>我可以投稿自己的现场素材吗？</summary>
+        <p>可以。页面顶部与底部的“我要投稿”入口支持提交素材链接或说明。请确保素材为原创或已获授权，并在提交时注明拍摄时间、地点与基本情况。审核通常在 3 个工作日内完成，结果会通过站内通知告知。</p>
+      </details>
+      <details class="db24-faq-item">
+        <summary>“24 小时挑战赛”是什么活动？</summary>
+        <p>这是平台定期发起的社区共创企划，参与者需在 24 小时内完成一段现场短片的拍摄与剪辑，主题会在每期公布。优秀作品会进入当日汇总的集合短片，并获得展示位与创作工具支持。报名信息请查看企业动态。</p>
+      </details>
+      <details class="db24-faq-item">
+        <summary>为什么有些内容会延迟发布？</summary>
+        <p>当信息涉及判罚争议、隐私或需要多方核对时，平台会选择先核实再发布。我们更看重准确与负责，而不是速度。核实完成后，相关内容会以复盘或说明的形式补充发布。</p>
+      </details>
+      <details class="db24-faq-item">
+        <summary>发现不实信息或侵权内容怎么办？</summary>
+        <p>可以通过每条内容下方的反馈入口，或页面底部的联系邮箱提交说明。请尽量附上具体链接与时间码，便于我们快速定位。我们会在收到后尽快处理，并对有效线索给予回复。</p>
+      </details>
+      <details class="db24-faq-item">
+        <summary>平台支持哪些画质与格式？</summary>
+        <p>建议上传 1080P 及以上规格的横版视频，码率不低于 8Mbps；移动端拍摄的竖版素材也可接受，但会在播放端做适配处理。音频建议单独录制，采样率 48kHz 为佳。具体技术规范可在投稿页面查看。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 合作品牌 -->
+<section class="db24-section db24-section-sm db24-partners">
+  <div class="db24-wrap">
+    <div class="db24-sec-head" style="justify-content:center;text-align:center;margin-bottom:22px">
+      <div>
+        <div class="db24-sec-kicker" style="justify-content:center">合作伙伴</div>
+        <h2 class="db24-sec-title" style="font-size:22px">与<em>值得信赖</em>的伙伴共同记录</h2>
+      </div>
+    </div>
+    <div class="db24-partner-row">
+      <div class="db24-partner">城市影像联盟</div>
+      <div class="db24-partner">拾光器材支持</div>
+      <div class="db24-partner">场边声音实验室</div>
+      <div class="db24-partner">青禾创作者基金</div>
+      <div class="db24-partner">长夜放映计划</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="db24-footer" id="db24-contact">
+  <div class="db24-wrap">
+    <div class="db24-footer-grid">
+      <div>
+        <div class="db24-footer-brand">
+          <div class="db24-brand-mark">24</div>
+          <div>
+            <div class="db24-brand-name" style="color:#fff">每日大赛24小时爆料汇总</div>
+            <div class="db24-brand-sub">Official Brand Video Portal</div>
+          </div>
+        </div>
+        <p>一个以小时为单位运转的赛事爆料影像社区，坚持原创、正版与高清标准，深耕赛事内容垂直领域，持续为创作者与用户提供值得信赖的内容生态。</p>
+        <div class="db24-share-row">
+          <button class="db24-share" data-db24-share="wechat">微信</button>
+          <button class="db24-share" data-db24-share="weibo">微博</button>
+          <button class="db24-share" data-db24-share="qq">QQ</button>
+          <button class="db24-share" data-db24-share="link">复制链接</button>
+        </div>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <a href="#db24-focus">焦点影像</a>
+        <a href="#db24-timeline">24H 时间线</a>
+        <a href="#db24-creators">创作者矩阵</a>
+        <a href="#db24-rank">数据榜单</a>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <a href="#db24-home">品牌解析</a>
+        <a href="#db24-news">企业动态</a>
+        <a href="#db24-reviews">用户口碑</a>
+        <a href="#db24-faq">帮助中心</a>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <p>商务合作：brand@daily24-report.example</p>
+        <p>内容反馈：feedback@daily24-report.example</p>
+        <p>投稿咨询：submit@daily24-report.example</p>
+        <p>工作时间：周一至周日 09:00 - 23:00</p>
+      </div>
+    </div>
+    <div class="db24-footer-bottom">
+      <span>每日大赛24小时爆料汇总 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容均为原创或已获授权 · 转载请注明来源</span>
+    </div>
+  </div>
+</footer>
+
+<button class="db24-backtop" id="db24BackTop" aria-label="回到顶部">↑</button>
+
+<!-- 投稿弹窗 -->
+<div class="db24-modal-mask" id="db24SubmitModal">
+  <div class="db24-modal">
+    <button class="db24-modal-close" data-db24-close="db24SubmitModal">×</button>
+    <h3>提交你的现场素材</h3>
+    <p>请填写基本信息，编辑团队会在 3 个工作日内与你联系。素材须为原创或已获授权。</p>
+    <input type="text" id="db24SubmitName" placeholder="你的昵称 / 创作者名">
+    <input type="text" id="db24SubmitLink" placeholder="素材链接（云盘或作品页地址）">
+    <textarea id="db24SubmitDesc" rows="3" placeholder="简单描述拍摄时间、地点与内容"></textarea>
+    <button class="db24-modal-btn" id="db24SubmitSend">提交投稿</button>
+  </div>
+</div>
+
+<!-- 评论弹窗 -->
+<div class="db24-modal-mask" id="db24CommentModal">
+  <div class="db24-modal">
+    <button class="db24-modal-close" data-db24-close="db24CommentModal">×</button>
+    <h3>内容评论</h3>
+    <p id="db24CommentTarget">正在查看该条内容的社区讨论。请友善表达，共同维护社区氛围。</p>
+    <div id="db24CommentList" style="font-size:13.4px;color:#4a5568;line-height:1.8;margin-bottom:14px">
+      <p>「时间线整理得很清楚，比刷零散消息省心多了。」</p>
+      <p>「希望这种标注来源的做法能一直保持下去。」</p>
+    </div>
+    <input type="text" id="db24CommentInput" placeholder="写一条友善的评论…">
+    <button class="db24-modal-btn" id="db24CommentSend">发送评论</button>
+  </div>
+</div>
+
+<!-- 作者信息弹窗 -->
+<div class="db24-modal-mask" id="db24CreatorModal">
+  <div class="db24-modal">
+    <button class="db24-modal-close" data-db24-close="db24CreatorModal">×</button>
+    <h3 id="db24CreatorName">创作者</h3>
+    <p id="db24CreatorDesc">简介加载中…</p>
+    <button class="db24-modal-btn" data-db24-close="db24CreatorModal">知道了</button>
+  </div>
+</div>
+
+<div class="db24-toast" id="db24Toast">操作成功</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端导航折叠 */
+  var navToggle = document.getElementById('db24NavToggle');
+  var mobileNav = document.getElementById('db24MobileNav');
+  if(navToggle && mobileNav){
+    navToggle.addEventListener('click', function(){
+      mobileNav.classList.toggle('db24-show');
+      navToggle.textContent = mobileNav.classList.contains('db24-show') ? '✕' : '☰';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mobileNav.classList.remove('db24-show');
+        navToggle.textContent = '☰';
+      });
+    });
+  }
+
+  /* Toast */
+  var toast = document.getElementById('db24Toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('db24-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('db24-show'); }, 2200);
+  }
+
+  /* 搜索提示 */
+  var searchInput = document.getElementById('db24SearchInput');
+  var searchBtn = document.getElementById('db24SearchBtn');
+  var searchHint = document.getElementById('db24SearchHint');
+  var searchPool = [
+    '第 247 期汇总', '赛前 6 小时', '技术台回放判定', '看台表情特写',
+    '24 小时挑战赛', '新人创作者', '赛后通道对话', '复盘剪辑室'
+  ];
+  function doSearch(){
+    if(!searchInput || !searchHint) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '<p>试试搜索“汇总”“复盘”“看台”等关键词。</p>';
+      searchHint.classList.add('db24-show');
+      return;
+    }
+    var hits = searchPool.filter(function(s){ return s.indexOf(q) !== -1; });
+    if(hits.length){
+      searchHint.innerHTML = '<b>找到 ' + hits.length + ' 个相关内容：</b>' +
+        hits.map(function(h){ return '<p>· ' + h + '</p>'; }).join('');
+    } else {
+      searchHint.innerHTML = '<b>未找到与“' + q.replace(/[<>&]/g,'') + '”直接匹配的内容</b><p>可尝试更短的关键词，或浏览下方时间线。</p>';
+    }
+    searchHint.classList.add('db24-show');
+  }
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+    searchInput.addEventListener('input', function(){ if(searchHint) searchHint.classList.remove('db24-show'); });
+    document.addEventListener('click', function(e){
+      if(searchHint && !searchHint.contains(e.target) && e.target !== searchInput){
+        searchHint.classList.remove('db24-show');
+      }
+    });
+  }
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('[data-db24-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var span = btn.querySelector('span');
+      var num = span ? parseInt(span.textContent.replace(/[^\d]/g,''),10) || 0 : 0;
+      if(btn.classList.contains('db24-on')){
+        btn.classList.remove('db24-on');
+        btn.innerHTML = '♡ <span>' + Math.max(0,num-1) + '</span>';
+        showToast('已取消点赞');
+      } else {
+        btn.classList.add('db24-on');
+        btn.innerHTML = '♥ <span>' + (num+1) + '</span>';
+        showToast('已点赞，感谢支持');
+      }
+    });
+  });
+  document.querySelectorAll('[data-db24-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('db24-on');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已加入收藏' : '已取消收藏');
+    });
+  });
+
+  /* 评论弹窗 */
+  var commentModal = document.getElementById('db24CommentModal');
+  var commentTarget = document.getElementById('db24CommentTarget');
+  var commentList = document.getElementById('db24CommentList');
+  document.querySelectorAll('[data-db24-comment]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.db24-card');
+      var title = card ? card.querySelector('.db24-card-title') : null;
+      if(commentTarget){
+        commentTarget.textContent = title ? ('正在查看《' + title.textContent.trim() + '》的社区讨论。') : '正在查看该条内容的社区讨论。';
+      }
+      if(commentModal) commentModal.classList.add('db24-show');
+    });
+  });
+  var commentSend = document.getElementById('db24CommentSend');
+  var commentInput = document.getElementById('db24CommentInput');
+  if(commentSend && commentInput){
+    commentSend.addEventListener('click', function(){
+      var v = commentInput.value.trim();
+      if(!v){ showToast('请先输入评论内容'); return; }
+      if(commentList){
+        var p = document.createElement('p');
+        p.textContent = '「' + v + '」';
+        commentList.appendChild(p);
+      }
+      commentInput.value = '';
+      showToast('评论已发布');
+    });
+  }
+
+  /* 作者弹窗 */
+  var creatorModal = document.getElementById('db24CreatorModal');
+  var creatorName = document.getElementById('db24CreatorName');
+  var creatorDesc = document.getElementById('db24CreatorDesc');
+  document.querySelectorAll('[data-db24-creator]').forEach(function(card){
+    card.addEventListener('click', function(e){
+      if(e.target.closest('button') || e.target.closest('a')) return;
+      if(creatorName) creatorName.textContent = card.getAttribute('data-db24-creator');
+      if(creatorDesc) creatorDesc.textContent = card.getAttribute('data-db24-desc') || '';
+      if(creatorModal) creatorModal.classList.add('db24-show');
+    });
+  });
+
+  /* 投稿弹窗 */
+  var submitModal = document.getElementById('db24SubmitModal');
+  var submitBtn = document.getElementById('db24SubmitBtn');
+  if(submitBtn && submitModal){
+    submitBtn.addEventListener('click', function(){ submitModal.classList.add('db24-show'); });
+  }
+  var submitSend = document.getElementById('db24SubmitSend');
+  if(submitSend){
+    submitSend.addEventListener('click', function(){
+      var name = document.getElementById('db24SubmitName');
+      var link = document.getElementById('db24SubmitLink');
+      if(!name.value.trim() || !link.value.trim()){
+        showToast('请填写昵称与素材链接');
+        return;
+      }
+      if(submitModal) submitModal.classList.remove('db24-show');
+      name.value = ''; link.value = '';
+      document.getElementById('db24SubmitDesc').value = '';
+      showToast('投稿已提交，编辑团队将尽快联系你');
+    });
+  }
+
+  /* 关闭弹窗 */
+  document.querySelectorAll('[data-db24-close]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-db24-close');
+      var el = document.getElementById(id);
+      if(el) el.classList.remove('db24-show');
+    });
+  });
+  document.querySelectorAll('.db24-modal-mask').forEach(function(mask){
+    mask.addEventListener('click', function(e){
+      if(e.target === mask) mask.classList.remove('db24-show');
+    });
+  });
+
+  /* 复制链接 */
+  var copyBtn = document.getElementById('db24CopyBtn');
+  function copyLink(){
+    var url = window.location.href.split('#')[0];
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){
+        showToast('链接已复制');
+      }).catch(function(){
+        showToast('复制失败，请手动复制地址栏');
+      });
+    } else {
+      showToast('当前环境不支持自动复制');
+    }
+  }
+  if(copyBtn) copyBtn.addEventListener('click', copyLink);
+
+  /* 分享 */
+  document.querySelectorAll('[data-db24-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var type = btn.getAttribute('data-db24-share');
+      if(type === 'link'){
+        copyLink();
+      } else {
+        var label = type === 'wechat' ? '微信' : (type === 'weibo' ? '微博' : 'QQ');
+        showToast('已生成' + label + '分享卡片，可前往对应应用粘贴');
+      }
+    });
+  });
+
+  /* 回到顶部 */
+  var backTop = document.getElementById('db24BackTop');
+  window.addEventListener('scroll', function(){
+    if(!backTop) return;
+    if(window.scrollY > 520) backTop.classList.add('db24-show');
+    else backTop.classList.remove('db24-show');
+  }, {passive:true});
+  if(backTop){
+    backTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-db24-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-db24-count'), 10) || 0;
+      var start = null;
+      var duration = 1100;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / duration, 1);
+        var val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+        el.textContent = val.toLocaleString('en-US');
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target.toLocaleString('en-US');
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window && counters.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCounters(); io.disconnect(); }
+      });
+    }, {threshold:.4});
+    io.observe(counters[0]);
+  } else {
+    runCounters();
+  }
+
+  /* 导航高亮 */
+  var sections = document.querySelectorAll('main section[id]');
+  var navLinks = document.querySelectorAll('.db24-nav a');
+  function highlightNav(){
+    var pos = window.scrollY + 150;
+    var current = '';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos) current = sec.id;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('db24-nav-active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', highlightNav, {passive:true});
+  highlightNav();
+})();
+</script>
+</body>
+                                                                                                                </html>
